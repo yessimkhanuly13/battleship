@@ -1,13 +1,20 @@
-function Ship(){
-    const a = "dddd";
-    return {
-        hit: function(){
-            console.log('hit '+a);
-        },
+function Ship(length, hits){
 
-        isSunk: function(){
-            console.log('isSunk')
+    const hit = () =>{
+        hits++;
+        return hits;
+    }
+
+    const isSunk = () =>{
+        if(hits === length){
+            return true;
         }
+
+        return false;
+    }
+
+    return {
+        length, hits, hit, isSunk
     }
 }
 

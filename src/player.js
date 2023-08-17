@@ -1,6 +1,6 @@
 function Player(name){
     return {
-        name: name
+        name
     }
 }
 

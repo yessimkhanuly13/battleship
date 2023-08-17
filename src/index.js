@@ -1,11 +1,4 @@
-import GameBoard from "./gameboard"
-import Player from "./player"
-import Ship from "./ship"
+const Ship = require('./ship');
+const Player = require('./player');
+const GameBoard = require('./gameboard');
 
-const gameBoard = GameBoard();
-const ship = Ship();
-const player = Player("DSss");
-
-gameBoard.recieveAttack();
-ship.hit();
-console.log(player.name);
