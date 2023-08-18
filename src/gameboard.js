@@ -22,8 +22,14 @@ function GameBoard(rows, cols){
 
     return {
         board,
-        recieveAttack: function(){
-            console.log('recieved attack');
+        recieveAttack: function(row, col){
+            const cell = board[row][col];
+            if(cell.isShip && !cell.isHit){
+                cell.isHit = true;
+                return true;
+            }
+
+            return false;
         }
     }
 }
