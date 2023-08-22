@@ -2,11 +2,22 @@ const Ship = require('./ship');
 const Player = require('./player');
 const GameBoard = require('./gameboard');
 
-let gameboard = GameBoard(5,5);
+let gameboard = GameBoard(10,10);
 
 const firstBoard = document.querySelector('.first-board');
 
 const startBtn = document.querySelector('.btn');
+
+const shipPlace = document.querySelector('.ships'); 
+
+const destroyer = Ship(2,"destroyer");
+const submarine = Ship(3, "submarine");
+const battleship = Ship(4, "battleship");
+const cruiser = Ship(3, "cruiser");
+const carier = Ship(5, "carrier");
+
+const ships = [destroyer, submarine, battleship, cruiser, carier];
+
 
 
 startBtn.addEventListener('click', ()=>{
@@ -28,6 +39,17 @@ startBtn.addEventListener('click', ()=>{
         }
         firstBoard.appendChild(rowElement);
     }
+
+    ships.forEach((ship)=>{
+        const shipForm = document.createElement('div');
+        shipForm.classList.add('ship');
+        for(let i = 0; i<ship.length; i++ ){
+            const shipEach = document.createElement('div');
+            shipEach.classList.add(ship.name);
+            shipForm.appendChild(shipEach);
+        }
+        shipPlace.appendChild(shipForm);
+    })
 })
 
-console.log(gameboard.board)
+console.log(ships);

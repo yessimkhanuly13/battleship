@@ -1,4 +1,6 @@
-function Ship(length, hits){
+function Ship(length, name){
+
+    let hits = 0;
 
     const hit = () =>{
         hits++;
@@ -14,7 +16,7 @@ function Ship(length, hits){
     }
 
     return {
-        length, hits, hit, isSunk
+        length, hit, isSunk, name
     }
 }
 

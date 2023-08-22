@@ -25,8 +25,12 @@
 
 .first-board, .second-board{
     border: 1px solid;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
+}
+
+.second-board{
+    display: none;
 }
 
 .row{
@@ -36,4 +40,20 @@
 .boards{
     display: flex;
     justify-content: space-evenly;
+}
+
+
+.ship{
+    display: flex;
+    border: 1px sol;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid;
+}
+
+.destroyer, .carrier, .battleship, .submarine, .cruiser{
+    border: 1px solid;
+    width: 34px;
+    height: 34px;
+    margin-right: 2px;
 }
