@@ -18,10 +18,10 @@ const carier = Ship(5, "carrier");
 
 const ships = [destroyer, submarine, battleship, cruiser, carier];
 
+let isCliked = false;
 
-
-startBtn.addEventListener('click', ()=>{
-
+startBtn.addEventListener('click', (e)=>{
+    if(!isCliked){
     for(let row = 0; row < gameboard.board.length; row++){
         const rowElement = document.createElement('div');
         rowElement.classList.add('row');
@@ -50,6 +50,10 @@ startBtn.addEventListener('click', ()=>{
         }
         shipPlace.appendChild(shipForm);
     })
+
+    isCliked = true;
+    }
 })
+
 
 console.log(ships);
