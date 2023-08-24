@@ -4,6 +4,8 @@ const GameBoard = require('./gameboard');
 
 let gameboard = GameBoard(10,10);
 
+console.log(gameboard.board);
+
 const firstBoard = document.querySelector('.first-board');
 
 const startBtn = document.querySelector('.btn');
